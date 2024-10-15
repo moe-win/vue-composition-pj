@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="post">
+    <div v-if="post" class="post">
       <h2>{{ post.title }}</h2>
       <h2>{{ post.body }}</h2>
     </div>
@@ -27,4 +27,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.post {
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block; */
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+.post h2 {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+.post h2::before {
+  content: "";
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  background: #ff8800;
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
+}
+</style>

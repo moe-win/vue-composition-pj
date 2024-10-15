@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .post {
   margin: 0 10px 10px 30px;
   padding-bottom: 30px;
