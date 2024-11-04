@@ -6,10 +6,10 @@ let getPosts = () => {
   let loading = async () => {
     try {
       //start before fetching data from server making spinner circle
-      await new Promise((resolve, reject) => {
-        // resolve();
-        setTimeout(resolve, 4000);
-      });
+      // await new Promise((resolve, reject) => {
+      //   // resolve();
+      //   setTimeout(resolve, 4000);
+      // });
       let response = await fetch("http://localhost:3000/posts");
       if (response.status === 404) {
         throw new Error("not found Page and URL");
