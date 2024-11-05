@@ -52,9 +52,6 @@ export default {
 };
 </script>
 <style>
-.error {
-  color: red;
-}
 .home {
   margin: 0 auto;
   padding: 40px;

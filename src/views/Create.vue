@@ -18,7 +18,7 @@ import { useRouter } from "vue-router"; //vue-router using one package useRouter
 export default {
   setup() {
     let router = useRouter(); //same as $router.param.()
-    console.log(router);
+    // console.log(router);
 
     let title = ref(""); //string for title input
     let body = ref(""); //string for body input
