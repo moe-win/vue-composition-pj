@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <div class="error">{{ error }}</div>
-    <PostList :posts="posts"></PostList>
-    <div v-if="posts.length > 0"></div>
+
+    <div v-if="posts.length > 0" class="homelayout">
+      <div><PostList :posts="posts"></PostList></div>
+      <div><TagGroup :posts="posts"></TagGroup></div>
+    </div>
     <div v-else><spinner></spinner></div>
 
     <!-- <div v-if="showPost">
@@ -17,8 +20,10 @@ import PostList from "@/components/PostList.vue";
 import getPosts from "@/composable/getPosts";
 import Spinner from "@/components/Spinner.vue";
 
+import TagGroup from "@/components/TagGroup.vue";
+
 export default {
-  components: { PostList, Spinner },
+  components: { PostList, Spinner, TagGroup },
   setup() {
     // let showPost = ref(true);
     // let posts = ref([]);
@@ -56,5 +61,9 @@ export default {
   margin: 0 auto;
   padding: 40px;
   max-width: 1200px;
+}
+.homelayout {
+  display: grid;
+  grid-template-columns: 600px 200px;
 }
 </style>
